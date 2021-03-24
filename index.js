@@ -1,10 +1,15 @@
 import axios from 'axios'
+import moment from 'moment'
+import _ from 'lodash'
+import fs from 'fs'
 
 const noRedirectOptions = {
     maxRedirects: 0,
     validateStatus: status => status >= 200 && status < 303
 }
 
+let construction_queue = ["lumber", "ironer", "stoner"] // lumber 4 --> 5 // ironer 2 --> 3 // stoner 2 --> 3
+let interval = null
 const main = async () => {
     const session = axios.create()
     let trash = null
@@ -54,13 +59,84 @@ const main = async () => {
     const dataUrl = `https://${gameworld}.grepolis.com/game/data?town_id=${townId}&action=get&h=${newToken}`
     dataUrldata = 'json=' + encodeURI(dataUrldata)
     const lastResponse = await session.post(dataUrl, dataUrldata)
-    const upgradeFarm = '{"model_url":"BuildingOrder","action_name":"buildUp","arguments":{"building_id":"storage"},"town_id":7135,"nl_init":true}'
-    const upgradeUrl = `https://${gameworld}.grepolis.com/game/frontend_bridge?town_id=${townId}&action=execute&h=${newToken}`
-    const execute = await session.post(upgradeUrl, 'json=' + encodeURI(upgradeFarm), noRedirectOptions)
-    // cookies = setCookies(session, cookies, execute.headers['set-cookie'])
-    console.log(execute.data)
+    const building = "main"
+    // const upgradeFarm = '{"model_url":"BuildingOrder","action_name":"buildUp","arguments":{"building_id":"docks"},"town_id":7135,"nl_init":true}'
+    // const upgrademain = '{"model_url":"BuildingOrder","action_name":"buildUp","arguments":{"building_id":"main"},"town_id":7135,"nl_init":true}'
+    // const upgradeUrl = `https://${gameworld}.grepolis.com/game/frontend_bridge?town_id=${townId}&action=execute&h=${newToken}`
+    // const execute = await session.post(upgradeUrl, 'json=' + encodeURI(upgrademain), noRedirectOptions)
+    // console.log(execute.data)
+    // Construction Module
+
+    // interval = setInterval(getBuildingData(newToken, session), 30000)
+    await getBuildingData(newToken, session)
 
 }
+
+const getBuildingData = async (newToken, session) => {
+    if (construction_queue.length > 0) {
+        let buildingDataUrl = `https://en134.grepolis.com/game/building_main?town_id=7135&action=index&h=${newToken}&json=${encodeURI('{"town_id":7135,"nl_init":true}')}`
+        let buildingdata = await session.get(buildingDataUrl)
+        let data = await parseBuildingData(buildingdata.data.json.html, newToken, session)
+        await getBuildingData(newToken, session)
+    }
+    else {
+        console.log('Finished processing construction queue')
+    }
+}
+
+const parseBuildingData = async (buildingData, newToken, session) => {
+    const start = buildingData.indexOf('BuildingMain.buildings = ') + 25
+    const end = buildingData.indexOf('BuildingMain.full_queue = ', start)
+    let stalebuildata = JSON.parse(buildingData.substring(start, end).replace(";", "").trim())
+    let isQueueFull = buildingData.substring(end + 26, end + 31) === "true" ? true : false
+    if (!isQueueFull) {
+        if (construction_queue.length > 0) {
+            let building = construction_queue.shift()
+            if (stalebuildata[building].can_upgrade) {
+                let upgradeCommand = '{"model_url":"BuildingOrder","action_name":"buildUp","arguments":{"building_id":"' + building + '"},"town_id":7135,"nl_init":true}'
+                console.log(`Processing building : ${building}`)
+                const upgradeUrl = `https://en134.grepolis.com/game/frontend_bridge?town_id=7135&action=execute&h=${newToken}`
+                const execute = await session.post(upgradeUrl, 'json=' + encodeURI(upgradeCommand), noRedirectOptions)
+                // {"model_url":"BuildingOrder/377435","action_name":"buyInstant","arguments":{"order_id":377435},"town_id":7135,"nl_init":true}
+                let fourMins = 240
+                let mybuildingData = _.find(execute.data.json.notifications, { "subject": "BuildingOrder" })
+                let order_id = mybuildingData.param_id
+                let parsedData = JSON.parse(mybuildingData.param_str)
+                let finishTime = parsedData.BuildingOrder.building_time
+                // let created_at = parsedData.BuildingOrder.created_at
+                // let completeAt = parsedData.BuildingOrder.to_be_completed_at
+                // console.log(finishTime)
+                // {
+                if (finishTime <= fourMins) {
+                    let instantCommand = '{ "model_url": "BuildingOrder/' + order_id + '", "action_name": "buyInstant", "arguments": { "order_id": ' + order_id + ' }, "town_id": 7135, "nl_init": true }'
+                    // {"model_url":"BuildingOrder/377655","action_name":"buyInstant","arguments":{"order_id":377655},"town_id":7135,"nl_init":true}
+                    const execute = await session.post(upgradeUrl, 'json=' + encodeURI(instantCommand), noRedirectOptions)
+                    // console.log(instantCommand)
+                    console.log(execute.data)
+                    console.log(`Buying instant buy for buidling : ${building}`)
+
+                }
+                else {
+                    let sleepTime = finishTime - fourMins
+
+                    // Usage!
+                    await sleep((sleepTime + 10) * 1000)
+                    let instantCommand = '{ "model_url": "BuildingOrder/' + order_id + '", "action_name": "buyInstant", "arguments": { "order_id": ' + order_id + ' }, "town_id": 7135, "nl_init": true }'
+                    const execute2 = await session.post(upgradeUrl, 'json=' + encodeURI(instantCommand), noRedirectOptions)
+                    console.log(execute2.data)
+                    console.log(`Buying instant buy for buidling : ${building}`)
+                }
+                // }
+            }
+        }
+    }
+}
+
+// sleep time expects milliseconds
+const sleep = (time) => {
+    return new Promise((resolve) => setTimeout(resolve, time))
+}
+
 const parseCookies = (setCookies) => {
     const cookies = {}
 
@@ -87,7 +163,7 @@ const cookieToString = (cookies) => {
     let cookieString = ''
 
     for (const [key, value] of Object.entries(cookies)) {
-        cookieString += `${key}=${value};`
+        cookieString += `${key}=${value}; `
     }
 
     return cookieString
