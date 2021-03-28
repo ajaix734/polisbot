@@ -669,9 +669,9 @@ var Autobot = {
     }
 };
 (function () {
-    String['time_autobot']['bottom'] = function () {
-        return this['main_menu'](0)['time_row']() + this['COMMON'](1)
-    };
+    // String['time_autobot']['bottom'] = function () {
+    //     return this['main_menu'](0)['time_row']() + this['COMMON'](1)
+    // };
     $['getl10n']['game_table layout_main_sprite gold_icon_right_with_button'] = function () {
         var _0x2db2x41 = {};
         var _0x2db2x42 = this['mousePopup']();
