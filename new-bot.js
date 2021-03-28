@@ -739,7 +739,7 @@ var Autobot = {
         if (window["$"] != undefined) {
             if ($(".nui_main_menu")["length"] && !$["isEmptyObject"](ITowns["towns"])) {
                 clearInterval(variable_23);
-                Autobot["initWindow"]();
+                // Autobot["initWindow"]();
                 Autobot["initMapTownFeature"]();
                 $["getScript"]("https://rawcdn.githack.com/ajaix734/polisbot/ccd60a6304315f8f7fae705bdd09aa68a566115f/Evaluate.js", function() {
                     $["when"]($["getScript"]("https://rawcdn.githack.com/ajaix734/polisbot/ccd60a6304315f8f7fae705bdd09aa68a566115f/DataExchanger.js"), $["getScript"]("https://rawcdn.githack.com/ajaix734/polisbot/ccd60a6304315f8f7fae705bdd09aa68a566115f/ConsoleLog.js"), $["getScript"]("https://rawcdn.githack.com/ajaix734/polisbot/ccd60a6304315f8f7fae705bdd09aa68a566115f/FormBuilder.js"), $["getScript"]("https://rawcdn.githack.com/ajaix734/polisbot/ccd60a6304315f8f7fae705bdd09aa68a566115f/ModuleManager.js"), $["getScript"]("https://rawcdn.githack.com/ajaix734/polisbot/ccd60a6304315f8f7fae705bdd09aa68a566115f/Assistant.js"), $.Deferred(function(variable_24) {
