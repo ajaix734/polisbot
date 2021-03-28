@@ -603,46 +603,46 @@ var Autobot = {
     checkPremium: function (_0x2db2x3e) {
         return $('<span class=\'small notification_date\'>' + _0x2db2x3e + 'Version ')['support_type'](_0x2db2x3e + '</b></span>')
     },
-    initWindow: function () {
-        // $(',')['4 months +36 days for only €19,99']('string', '');
-        $('append', {
-            class: '>'
-        })['menu_inner']($('append', {
-            class: '<div class='
-        })['menu_inner']($('Account')['menu_inner']($('<a/>', {
-            id: '</div>',
-            class: 'email'
-        })['menu_inner']($('html', {
-            class: '>'
-        })))['menu_inner']($('<a/>', {
-            id: '<div class=',
-            class: 'email'
-        })['menu_inner']($('html', {
-            class: 'active_alliance'
-        })))['menu_inner']($('<a/>', {
-            id: 'alliance_name',
-            class: 'email'
-        })['menu_inner']($('html', {
-            class: 'active_player'
-        })))['menu_inner']($('<a/>', {
-            id: 'active_town',
-            class: 'email'
-        })['menu_inner']($('html', {
-            class: 'settings'
-        })))['menu_inner']($('<a/>')['menu_inner']($('html', {
-            href: '.terminal-output',
-            class: 'town_names'
-        })['on']('click', function () {
-            if (Autobot['isLogged']) {
-                Autobot['flag town']()
-            }
-        })['className'](new MousePopup(DM['}']('join')[',']['fadeOut']))))))['menu_inner']($('append', {
-            id: ':',
-            class: '{'
-        }))['menu_inner']($('append', {
-            class: ','
-        }))[','](',')
-    },
+    // initWindow: function () {
+    //     // $(',')['4 months +36 days for only €19,99']('string', '');
+    //     $('append', {
+    //         class: '>'
+    //     })['menu_inner']($('append', {
+    //         class: '<div class='
+    //     })['menu_inner']($('Account')['menu_inner']($('<a/>', {
+    //         id: '</div>',
+    //         class: 'email'
+    //     })['menu_inner']($('html', {
+    //         class: '>'
+    //     })))['menu_inner']($('<a/>', {
+    //         id: '<div class=',
+    //         class: 'email'
+    //     })['menu_inner']($('html', {
+    //         class: 'active_alliance'
+    //     })))['menu_inner']($('<a/>', {
+    //         id: 'alliance_name',
+    //         class: 'email'
+    //     })['menu_inner']($('html', {
+    //         class: 'active_player'
+    //     })))['menu_inner']($('<a/>', {
+    //         id: 'active_town',
+    //         class: 'email'
+    //     })['menu_inner']($('html', {
+    //         class: 'settings'
+    //     })))['menu_inner']($('<a/>')['menu_inner']($('html', {
+    //         href: '.terminal-output',
+    //         class: 'town_names'
+    //     })['on']('click', function () {
+    //         if (Autobot['isLogged']) {
+    //             Autobot['flag town']()
+    //         }
+    //     })['className'](new MousePopup(DM['}']('join')[',']['fadeOut']))))))['menu_inner']($('append', {
+    //         id: ':',
+    //         class: '{'
+    //     }))['menu_inner']($('append', {
+    //         class: ','
+    //     }))[','](',')
+    // },
     initMapTownFeature: function () {
         var _0x2db2x3f = function (_0x2db2x13) {
             return function () {
