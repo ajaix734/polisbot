@@ -20,7 +20,7 @@ ModuleManager = {
       };
       this['startFarming'] = function () {
         Autofarm['startFarming'](this)
-        console.log(Autofarm['startFarming'])
+        console.log('Farm Module', Autofarm)
       };
       this['startCulture'] = function () {
         Autoculture['startCulture'](this)
