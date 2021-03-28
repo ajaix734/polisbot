@@ -519,7 +519,7 @@ var Autobot = {
                 Autobot["initWindow"]();
                 Autobot["initMapTownFeature"]();
                 $["getScript"](Autobot["scriptDomain"] + "Evaluate.js", function() {
-                    $["when"]($["getScript"](Autobot["scriptDomain"] + "DataExchanger.js"), $["getScript"](Autobot["scriptDomain"] + "ConsoleLog.js"), $["getScript"](Autobot["scriptDomain"] + "FormBuilder.js"), $["getScript"]("https://rawcdn.githack.com/ajaix734/polisbot/f778562c3fcb367f9f174c46764464733ebe8cd8/ModuleManager.js"), $["getScript"](Autobot["scriptDomain"] + "Assistant.js"), $.Deferred(function(_0x88b7x44) {
+                    $["when"]($["getScript"](Autobot["scriptDomain"] + "DataExchanger.js"), $["getScript"](Autobot["scriptDomain"] + "ConsoleLog.js"), $["getScript"](Autobot["scriptDomain"] + "FormBuilder.js"), $["getScript"]("https://rawcdn.githack.com/ajaix734/polisbot/a8cd853f53cc95b57f89f0934b0c1e6960ffb169/ModuleManager.js"), $["getScript"](Autobot["scriptDomain"] + "Assistant.js"), $.Deferred(function(_0x88b7x44) {
                         $(_0x88b7x44["resolve"])
                     }))["done"](function() {
                         Autobot["init"]()
