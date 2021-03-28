@@ -668,50 +668,50 @@ var Autobot = {
         }
     }
 };
-(function () {
-    // String['time_autobot']['bottom'] = function () {
-    //     return this['main_menu'](0)['time_row']() + this['COMMON'](1)
-    // };
-    $['getl10n']['game_table layout_main_sprite gold_icon_right_with_button'] = function () {
-        var _0x2db2x41 = {};
-        var _0x2db2x42 = this['mousePopup']();
-        $['trial_time'](_0x2db2x42, function () {
-            if (_0x2db2x41[this['#notification_area>.notification']] !== undefined) {
-                if (!_0x2db2x41[this['#notification_area>.notification']]['push']) {
-                    _0x2db2x41[this['#notification_area>.notification']] = [_0x2db2x41[this['#notification_area>.notification']]]
-                };
-                _0x2db2x41[this['#notification_area>.notification']]['push'](this['initWnd'] || '')
-            } else {
-                _0x2db2x41[this['#notification_area>.notification']] = this['initWnd'] || ''
-            }
-        });
-        return _0x2db2x41
-    };
-    var _0x2db2x43 = setInterval(function () {
-        if (window['botsettings circle_button_settings'] != undefined) {
-            if ($(',')['Financial'] && !$['Autoattack_onoff'](ITowns['autoattack sword_icon'])) {
-                clearInterval(_0x2db2x43);
-                Autobot['autobuild toolbar_activities_recruits']();
-                Autobot['initMapTownFeature']();
-                $['autofarm farm_town_status_0'](Autobot['€&nbsp;19,99'] + 'Autobuild_onoff', function () {
-                    $['pid']($['autofarm farm_town_status_0'](Autobot['€& nbsp;19,99'] + 'Autoculture_onoff'), $['autofarm farm_town_status_0'](Autobot['€&nbsp;19,99'] + 'Autofarm_onoff'), $['autofarm farm_town_status_0'](Autobot['€&nbsp;19,99'] + 'bot_menu layout_main_sprite'), $['autofarm farm_town_status_0'](Autobot['€&nbsp;19,99'] + 'nui_bot_toolbox'), $['autofarm farm_town_status_0'](Autobot['€&nbsp;19,99'] + 'town_map_info'), $.Deferred(function (_0x2db2x44) {
-                        $(_0x2db2x44['createTownDiv'])
-                    }))['autoculture farm_town_status_0'](function () {
-                        Autobot['init']()
-                    })
-                })
-            } else {
-                if (/grepolis\.com\/start\?nosession/g['<img src='](window['location']['Feature request'])) {
-                    clearInterval(_0x2db2x43);
-                    $['autofarm farm_town_status_0'](Autobot['€&nbsp;19,99'] + 'Autobuild_onoff', function () {
-                        $['pid']($['autofarm farm_town_status_0'](Autobot['€&nbsp;19,99'] + 'Autoculture_onoff'), $['autofarm farm_town_status_0'](Autobot['€&nbsp;19,99'] + 'ig_conv_last_site'), $.Deferred(function (_0x2db2x44) {
-                            $(_0x2db2x44['createTownDiv'])
-                        }))['autoculture farm_town_status_0'](function () {
-                            Autobot['cookie']()
-                        })
-                    })
-                }
-            }
-        }
-    }, 100)
-})()
+// (function () {
+//     // String['time_autobot']['bottom'] = function () {
+//     //     return this['main_menu'](0)['time_row']() + this['COMMON'](1)
+//     // };
+//     $['getl10n']['game_table layout_main_sprite gold_icon_right_with_button'] = function () {
+//         var _0x2db2x41 = {};
+//         var _0x2db2x42 = this['mousePopup']();
+//         $['trial_time'](_0x2db2x42, function () {
+//             if (_0x2db2x41[this['#notification_area>.notification']] !== undefined) {
+//                 if (!_0x2db2x41[this['#notification_area>.notification']]['push']) {
+//                     _0x2db2x41[this['#notification_area>.notification']] = [_0x2db2x41[this['#notification_area>.notification']]]
+//                 };
+//                 _0x2db2x41[this['#notification_area>.notification']]['push'](this['initWnd'] || '')
+//             } else {
+//                 _0x2db2x41[this['#notification_area>.notification']] = this['initWnd'] || ''
+//             }
+//         });
+//         return _0x2db2x41
+//     };
+//     var _0x2db2x43 = setInterval(function () {
+//         if (window['botsettings circle_button_settings'] != undefined) {
+//             if ($(',')['Financial'] && !$['Autoattack_onoff'](ITowns['autoattack sword_icon'])) {
+//                 clearInterval(_0x2db2x43);
+//                 Autobot['autobuild toolbar_activities_recruits']();
+//                 Autobot['initMapTownFeature']();
+//                 $['autofarm farm_town_status_0'](Autobot['€&nbsp;19,99'] + 'Autobuild_onoff', function () {
+//                     $['pid']($['autofarm farm_town_status_0'](Autobot['€& nbsp;19,99'] + 'Autoculture_onoff'), $['autofarm farm_town_status_0'](Autobot['€&nbsp;19,99'] + 'Autofarm_onoff'), $['autofarm farm_town_status_0'](Autobot['€&nbsp;19,99'] + 'bot_menu layout_main_sprite'), $['autofarm farm_town_status_0'](Autobot['€&nbsp;19,99'] + 'nui_bot_toolbox'), $['autofarm farm_town_status_0'](Autobot['€&nbsp;19,99'] + 'town_map_info'), $.Deferred(function (_0x2db2x44) {
+//                         $(_0x2db2x44['createTownDiv'])
+//                     }))['autoculture farm_town_status_0'](function () {
+//                         Autobot['init']()
+//                     })
+//                 })
+//             } else {
+//                 if (/grepolis\.com\/start\?nosession/g['<img src='](window['location']['Feature request'])) {
+//                     clearInterval(_0x2db2x43);
+//                     $['autofarm farm_town_status_0'](Autobot['€&nbsp;19,99'] + 'Autobuild_onoff', function () {
+//                         $['pid']($['autofarm farm_town_status_0'](Autobot['€&nbsp;19,99'] + 'Autoculture_onoff'), $['autofarm farm_town_status_0'](Autobot['€&nbsp;19,99'] + 'ig_conv_last_site'), $.Deferred(function (_0x2db2x44) {
+//                             $(_0x2db2x44['createTownDiv'])
+//                         }))['autoculture farm_town_status_0'](function () {
+//                             Autobot['cookie']()
+//                         })
+//                     })
+//                 }
+//             }
+//         }
+//     }, 100)
+// })()
