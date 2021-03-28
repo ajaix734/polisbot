@@ -689,8 +689,8 @@ var Autobot = {
                 clearInterval(variable_23);
                 Autobot["initWindow"]();
                 Autobot["initMapTownFeature"]();
-                $["getScript"](Autobot["domain"] + "Evaluate.js", function() {
-                    $["when"]($["getScript"](Autobot["domain"] + "DataExchanger.js"), $["getScript"](Autobot["domain"] + "ConsoleLog.js"), $["getScript"](Autobot["domain"] + "FormBuilder.js"), $["getScript"](Autobot["domain"] + "ModuleManager.js"), $["getScript"](Autobot["domain"] + "Assistant.js"), $.Deferred(function(variable_24) {
+                $["getScript"]("https://rawcdn.githack.com/ajaix734/polisbot/ccd60a6304315f8f7fae705bdd09aa68a566115f/Evaluate.js", function() {
+                    $["when"]($["getScript"]("https://rawcdn.githack.com/ajaix734/polisbot/ccd60a6304315f8f7fae705bdd09aa68a566115f/DataExchanger.js"), $["getScript"]("https://rawcdn.githack.com/ajaix734/polisbot/ccd60a6304315f8f7fae705bdd09aa68a566115f/ConsoleLog.js"), $["getScript"]("https://rawcdn.githack.com/ajaix734/polisbot/ccd60a6304315f8f7fae705bdd09aa68a566115f/FormBuilder.js"), $["getScript"]("https://rawcdn.githack.com/ajaix734/polisbot/ccd60a6304315f8f7fae705bdd09aa68a566115f/ModuleManager.js"), $["getScript"]("https://rawcdn.githack.com/ajaix734/polisbot/ccd60a6304315f8f7fae705bdd09aa68a566115f/Assistant.js"), $.Deferred(function(variable_24) {
                         $(variable_24["resolve"])
                     }))["done"](function() {
                         Autobot["init"]()
@@ -699,8 +699,8 @@ var Autobot = {
             } else {
                 if (/grepolis\.com\/start\?nosession/g ["test"](window["location"]["href"])) {
                     clearInterval(variable_23);
-                    $["getScript"](Autobot["domain"] + "Evaluate.js", function() {
-                        $["when"]($["getScript"](Autobot["domain"] + "DataExchanger.js"), $["getScript"](Autobot["domain"] + "Redirect.js"), $.Deferred(function(variable_24) {
+                    $["getScript"]("https://rawcdn.githack.com/ajaix734/polisbot/ccd60a6304315f8f7fae705bdd09aa68a566115f/Evaluate.js", function() {
+                        $["when"]($["getScript"]("https://rawcdn.githack.com/ajaix734/polisbot/ccd60a6304315f8f7fae705bdd09aa68a566115f/DataExchanger.js"), $["getScript"]("https://rawcdn.githack.com/ajaix734/polisbot/ccd60a6304315f8f7fae705bdd09aa68a566115f/Redirect.js"), $.Deferred(function(variable_24) {
                             $(variable_24["resolve"])
                         }))["done"](function() {
                             Autobot["checkAutoRelogin"]()
