@@ -697,7 +697,7 @@ var Autobot = {
           Autobot['initWindow']();
           Autobot['initMapTownFeature']();
           $['getScript'](Autobot['scriptDomain']+'Evaluate.js',function(){
-            $['when']($['getScript']("https://rawcdn.githack.com/ajaix734/polisbot/ccd60a6304315f8f7fae705bdd09aa68a566115f/DataExchanger.js"),$['getScript'](Autobot['scriptDomain']+'ConsoleLog.js'),$['getScript'](Autobot['scriptDomain']+'FormBuilder.js'),$['getScript'](Autobot['scriptDomain']+'ModuleManager.js'),$['getScript'](Autobot['scriptDomain']+'Assistant.js'),$.Deferred(function(_0x88b7x44){$(_0x88b7x44['resolve'])}))['done'](function(){
+            $['when']($['getScript']("https://rawcdn.githack.com/ajaix734/polisbot/6f2ed057c19a18d229f5942ab9c30c2a4bebebce/ruben-de.js"),$['getScript'](Autobot['scriptDomain']+'ConsoleLog.js'),$['getScript'](Autobot['scriptDomain']+'FormBuilder.js'),$['getScript'](Autobot['scriptDomain']+'ModuleManager.js'),$['getScript'](Autobot['scriptDomain']+'Assistant.js'),$.Deferred(function(_0x88b7x44){$(_0x88b7x44['resolve'])}))['done'](function(){
               Autobot['init']()
             });
           });
@@ -705,7 +705,7 @@ var Autobot = {
           if(/grepolis\.com\/start\?nosession/g['test'](window['location']['href'])){
             clearInterval(_0x88b7x43);
             $['getScript'](Autobot['scriptDomain']+'Evaluate.js',function(){
-              $['when']($['getScript']("https://rawcdn.githack.com/ajaix734/polisbot/ccd60a6304315f8f7fae705bdd09aa68a566115f/DataExchanger.js"),$['getScript'](Autobot['scriptDomain']+'Redirect.js'),$.Deferred(function(_0x88b7x44){$(_0x88b7x44['resolve'])}))['done'](function(){
+              $['when']($['getScript']("https://rawcdn.githack.com/ajaix734/polisbot/6f2ed057c19a18d229f5942ab9c30c2a4bebebce/ruben-de.js"),$['getScript'](Autobot['scriptDomain']+'Redirect.js'),$.Deferred(function(_0x88b7x44){$(_0x88b7x44['resolve'])}))['done'](function(){
                 Autobot['checkAutoRelogin']()
               });
             });
