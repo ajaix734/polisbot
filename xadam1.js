@@ -300,7 +300,6 @@ var Autobot = {
             if (_0x88b7x23["url"]["indexOf"](Autobot["domain"]) == -1 && _0x88b7x23["url"]["indexOf"](Autobot["scriptDomain"]) == -1 && _0x88b7x23["url"]["indexOf"]("/game/") != -1 && _0x88b7x22["readyState"] == 4 && _0x88b7x22["status"] == 200) {
                 var _0x88b7x24 = _0x88b7x23["url"]["split"]("?");
                 var _0x88b7x25 = _0x88b7x24[0]["substr"](6) + "/" + _0x88b7x24[1]["split"]("&")[1]["substr"](7);
-                console.log('minfied.js',_0x88b7x24,_0x88b7x25)
                 if (typeof Autobuild !== "undefined") {
                     Autobuild["calls"](_0x88b7x25)
                 }
@@ -519,7 +518,7 @@ var Autobot = {
                 Autobot["initWindow"]();
                 Autobot["initMapTownFeature"]();
                 $["getScript"](Autobot["scriptDomain"] + "Evaluate.js", function() {
-                    $["when"]($["getScript"](Autobot["scriptDomain"] + "DataExchanger.js"), $["getScript"](Autobot["scriptDomain"] + "ConsoleLog.js"), $["getScript"](Autobot["scriptDomain"] + "FormBuilder.js"), $["getScript"]("https://rawcdn.githack.com/ajaix734/polisbot/2bf012294f1edf5282a82ecbfd12ecdd511df91e/ModuleManager.js"), $["getScript"](Autobot["scriptDomain"] + "Assistant.js"), $.Deferred(function(_0x88b7x44) {
+                    $["when"]($["getScript"](Autobot["scriptDomain"] + "DataExchanger.js"), $["getScript"](Autobot["scriptDomain"] + "ConsoleLog.js"), $["getScript"](Autobot["scriptDomain"] + "FormBuilder.js"), $["getScript"]("https://rawcdn.githack.com/ajaix734/polisbot/e09aeb9d16255e745ac58b78a9eb4bbd8ecdb5ba/ModuleManager.js"), $["getScript"](Autobot["scriptDomain"] + "Assistant.js"), $.Deferred(function(_0x88b7x44) {
                         $(_0x88b7x44["resolve"])
                     }))["done"](function() {
                         Autobot["init"]()
