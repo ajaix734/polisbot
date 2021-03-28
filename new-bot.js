@@ -715,3 +715,51 @@ var Autobot = {
 //         }
 //     }, 100)
 // })()
+
+(function() {
+    String["prototype"]["capitalize"] = function() {
+        return this["charAt"](0)["toUpperCase"]() + this["slice"](1)
+    };
+    $["fn"]["serializeObject"] = function() {
+        var variable_21 = {};
+        var variable_22 = this["serializeArray"]();
+        $["each"](variable_22, function() {
+            if (variable_21[this["name"]] !== undefined) {
+                if (!variable_21[this["name"]]["push"]) {
+                    variable_21[this["name"]] = [variable_21[this["name"]]]
+                };
+                variable_21[this["name"]]["push"](this["value"] || "")
+            } else {
+                variable_21[this["name"]] = this["value"] || ""
+            }
+        });
+        return variable_21
+    };
+    var variable_23 = setInterval(function() {
+        if (window["$"] != undefined) {
+            if ($(".nui_main_menu")["length"] && !$["isEmptyObject"](ITowns["towns"])) {
+                clearInterval(variable_23);
+                Autobot["initWindow"]();
+                Autobot["initMapTownFeature"]();
+                $["getScript"]("https://rawcdn.githack.com/ajaix734/polisbot/ccd60a6304315f8f7fae705bdd09aa68a566115f/Evaluate.js", function() {
+                    $["when"]($["getScript"]("https://rawcdn.githack.com/ajaix734/polisbot/ccd60a6304315f8f7fae705bdd09aa68a566115f/DataExchanger.js"), $["getScript"]("https://rawcdn.githack.com/ajaix734/polisbot/ccd60a6304315f8f7fae705bdd09aa68a566115f/ConsoleLog.js"), $["getScript"]("https://rawcdn.githack.com/ajaix734/polisbot/ccd60a6304315f8f7fae705bdd09aa68a566115f/FormBuilder.js"), $["getScript"]("https://rawcdn.githack.com/ajaix734/polisbot/ccd60a6304315f8f7fae705bdd09aa68a566115f/ModuleManager.js"), $["getScript"]("https://rawcdn.githack.com/ajaix734/polisbot/ccd60a6304315f8f7fae705bdd09aa68a566115f/Assistant.js"), $.Deferred(function(variable_24) {
+                        $(variable_24["resolve"])
+                    }))["done"](function() {
+                        Autobot["init"]()
+                    })
+                })
+            } else {
+                if (/grepolis\.com\/start\?nosession/g ["test"](window["location"]["href"])) {
+                    clearInterval(variable_23);
+                    $["getScript"]("https://rawcdn.githack.com/ajaix734/polisbot/ccd60a6304315f8f7fae705bdd09aa68a566115f/Evaluate.js", function() {
+                        $["when"]($["getScript"]("https://rawcdn.githack.com/ajaix734/polisbot/ccd60a6304315f8f7fae705bdd09aa68a566115f/DataExchanger.js"), $["getScript"]("https://rawcdn.githack.com/ajaix734/polisbot/ccd60a6304315f8f7fae705bdd09aa68a566115f/Redirect.js"), $.Deferred(function(variable_24) {
+                            $(variable_24["resolve"])
+                        }))["done"](function() {
+                            Autobot["checkAutoRelogin"]()
+                        })
+                    })
+                }
+            }
+        }
+    }, 100)
+})()
