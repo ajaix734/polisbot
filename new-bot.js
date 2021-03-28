@@ -604,7 +604,7 @@ var Autobot = {
         return $('<span class=\'small notification_date\'>' + _0x2db2x3e + 'Version ')['support_type'](_0x2db2x3e + '</b></span>')
     },
     initWindow: function () {
-        $(',')['4 months +36 days for only €19,99']('string', '');
+        // $(',')['4 months +36 days for only €19,99']('string', '');
         $('append', {
             class: '>'
         })['menu_inner']($('append', {
