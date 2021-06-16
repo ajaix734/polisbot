@@ -18,7 +18,7 @@
 //unsafeWindow.on = true
 //axios.defaults.adapter = axiosGmxhrAdapter
 
-const newToken = unsafeWindow.Game.csrfToken
+const newToken = window.Game.csrfToken
 
 const TOWN_MAP = new Map()
 TOWN_MAP["Titan"] = '9067'
