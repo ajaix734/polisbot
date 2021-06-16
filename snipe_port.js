@@ -1,22 +1,4 @@
-// ==UserScript==
-// @name        Snipe Bot
-// @grant       GM_xmlhttpRequest
-// @description hello
-// @version     0.0.1
-// @author      Ajaix,Jwick
-// @include        http://*.grepolis.com/*
-// @include        https://*.grepolis.com/*
-// @exclude        forum.*.grepolis.*/*
-// @exclude        wiki.*.grepolis.*/*
-// @require https://raw.githubusercontent.com/lodash/lodash/4.17.4/dist/lodash.js
-// @require https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js
-// @require https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.33/moment-timezone.min.js
-// @require https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.33/moment-timezone-with-data.min.js
-// @run-at      document-end
-// ==/UserScript==
 
-//unsafeWindow.on = true
-//axios.defaults.adapter = axiosGmxhrAdapter
 
 const newToken = window.Game.csrfToken
 
