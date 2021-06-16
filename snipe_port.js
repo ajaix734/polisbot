@@ -1,5 +1,3 @@
-const moment = require('moment-timezone')
-
 const newToken = window.Game.csrfToken
 
 const TOWN_MAP = new Map()
