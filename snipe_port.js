@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const moment = require('moment-timezone')
 
 const newToken = window.Game.csrfToken
