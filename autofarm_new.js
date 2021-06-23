@@ -24,6 +24,10 @@ const autoFarm = async (newToken) => {
     })
         .then(response => response.json())
         .then(json => console.log(json))
+
+        fetch(`https://es98.grepolis.com/game/map_data?town_id=9067&action=get_chunks&h=${newToken}&json=${encodeURI('{"chunks":[{"x":29,"y":23,"timestamp":0},{"x":28,"y":23,"timestamp":0}],"town_id":9067,"nl_init":true}')}&_=1624473404535`)
+
+        // fetch(`https://es98.grepolis.com/game/map_data?town_id=9067&action=get_chunks&h=${newToken}&json=${encodeURI('{"chunks":[{"x":29,"y":23,"timestamp":0},{"x":28,"y":23,"timestamp":0}],"town_id":9067,"nl_init":true}')}&_=1624473404535`)
     // fetch('https://jsonplaceholder.typicode.com/todos/1')
     //     .then(response => response.json())
     //     .then(json => console.log(json))
