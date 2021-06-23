@@ -5,7 +5,7 @@ const autoFarm = async (newToken) => {
     let collect_url = `https://es98.grepolis.com/game/farm_town_overviews?town_id=9067&action=claim_loads_multiple&h=${newToken}`
     let payload = '{"towns":[5989,10610,7461,9317,9378,9067,4322,9984,5974,9754],"time_option_base":300,"time_option_booty":600,"claim_factor":"normal","town_id":9984,"nl_init":true}'
     // await GM_Post(collect_url, 'json=' + encodeURI(payload))
-    fetch('collect_url', {
+    fetch(collect_url, {
         method: 'POST',
         headers: {
             "accept": "text/plain, */*; q=0.01",
